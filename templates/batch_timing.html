@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'welcome_to_AEC.html' %}
+{% block head %}
+<title>Batch Timing</title>
+{% endblock %}
+{% block body %}
+<h1>Batch Timing..!!</h1>
+
+<body bgcolor='pink;'>
+  <div class="batch_timing">
+  <table border="2px;">
+        <thead>
+          <th style="padding-left:20px; padding-right:25px;">BATCH</th>
+          <th style="padding-left:25px; padding-right:25px;">TIMING</th>
+        </thead>
+        {% for item in list %}
+          <tr>
+            <td style="padding-left:25px; padding-right:25px;">{{ item.Batch|upper }}</td>
+            <td style="padding-left:25px; padding-right:10px;">{{ item.Timing }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+</br>
+</br>
+  <h1>New Batch Timing..!!</h1>
+
+</body>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% block head %}
+    <title>Sign Up</title>
+    {% endblock %}
+  </head>
+  {% block body %}
+  <body>
+    <h1>Registration Form....!!</h1>
+    <div class="container">
+    <table border="2px;">
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" name="submit" value="Register">
+        <input type="reset" name="reset" value="Cancel">
+      </form>
+    </table>
+  </div>
+    </html>
+  </body>
+  {% endblock %}

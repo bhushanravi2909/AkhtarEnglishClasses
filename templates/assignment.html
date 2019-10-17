@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'welcome_to_AEC.html' %}
+{% block head %}
+<title>Assignments</title>
+{% endblock %}
+{% block body %}
+<h1>Assignments..!!</h1>
+<body>
+  <div class="assignment">
+    <table border="3px;" align="center">
+        <thead>
+          <th style="padding-left:20px; padding-right:25px;">CLASS</th>
+          <th style="padding-left:25px; padding-right:25px;">TITLE</th>
+          <th style="padding-left:25px; padding-right:25px;">POSTED DATE</th>
+          <th style="padding-left:25px; padding-right:25px;">SUBMISSION DATE</th>
+        </thead>
+        {% for item in list %}
+          <tr>
+            <td style="padding-left:25px; padding-right:25px;">{{ item.Class }}</td>
+            <td style="padding-left:25px; padding-right:10px;">{{ item.Title }}</td>
+            <td style="padding-left:25px; padding-right:10px;">{{ item.Posted_date }}</td>
+            <td style="padding-left:25px; padding-right:10px;">{{ item.Submission_Date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+
+</body>
+{% endblock %}
